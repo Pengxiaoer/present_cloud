@@ -7,7 +7,15 @@ import Articles from './views/Articles.vue'
 import Echarts from './views/Echarts.vue'
 import Login from './views/Login.vue'
 import NotFound from './views/NotFound.vue'
-import Profile from './views/Profile'
+import Profile from './views/Profile.vue'
+import Alterpassword from './views/Alterpassword.vue'
+import Aboutus from './views/AboutUs.vue'
+import Account from './views/Account.vue'
+import Check from './views/CheckWork.vue'
+import Curriculum from './views/Curriculum.vue'
+import DataD from './views/DataDictionary'
+import DataDM from './views/DataDictionaryM'
+import System from './views/SystemSetting'
 
 Vue.use(Router)
 
@@ -47,6 +55,46 @@ const router = new Router({
           path: '/profile',
           name: 'profile',
           component: Profile
+        },
+        {
+          path: '/password',
+          name: 'password',
+          component: Alterpassword
+        },
+        {
+          path: '/aboutus',
+          name: 'aboutus',
+          component: Aboutus
+        },
+        {
+          path: '/account',
+          name: 'account',
+          component: Account
+        },
+        {
+          path: '/check',
+          name: 'check',
+          component: Check
+        },
+        {
+          path: '/curriculum',
+          name: 'curriculum',
+          component: Curriculum
+        },
+        {
+          path: '/datad',
+          name: 'datad',
+          component: DataD
+        },
+        {
+          path: '/datadm',
+          name: 'datadm',
+          component: DataDM
+        },
+        {
+          path: '/system',
+          name: 'system',
+          component: System
         },
         {
           path: '/404',
