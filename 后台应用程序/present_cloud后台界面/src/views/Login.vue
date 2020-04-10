@@ -84,11 +84,11 @@ export default {
 
 <style lang="scss" scoped>
 .login-box {
-  width: 100%;
-  height: 100%;
   overflow: hidden;
   background: #20222A;
-  background-image: url('../assets/back.jpg');
+  background-image: url('../assets/background.jpg');
+  background-size:100% 100%;
+  background-repeat:no-repeat;
   .login-form {
     border-radius: 5px;
     background-clip: padding-box;
