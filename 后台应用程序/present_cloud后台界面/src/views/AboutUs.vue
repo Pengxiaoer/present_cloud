@@ -1,21 +1,38 @@
 <template>
-  <div class="console">
-    <div>
-        <el-breadcrumb separator="/">
-            <el-breadcrumb-item :to="{ path: '/console' }">首页</el-breadcrumb-item>
-            <el-breadcrumb-item><a href="/">活动管理</a></el-breadcrumb-item>
-            <el-breadcrumb-item>活动列表</el-breadcrumb-item>
-        </el-breadcrumb>
-      </div>
+  <div class="aboutus">
+    <el-main>
+        <el-carousel :autoplay="false" :loop="false" arrow="never" type="card" height="500px">
+            <el-carousel-item>
+                <h3 class="medium">222</h3>
+            </el-carousel-item>
+            <el-carousel-item>
+                <h3 class="medium">333</h3>
+            </el-carousel-item>
+        </el-carousel>
+    </el-main>
   </div>
 </template>
 
 <script>
 export default {
-
+  name: 'aboutus'
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
+    .el-carousel__item h3 {
+        color: #475669;
+        font-size: 14px;
+        opacity: 0.75;
+        line-height: 200px;
+        margin: 0;
+    }
 
+    .el-carousel__item:nth-child(2n) {
+        background-color: #99a9bf;
+    }
+
+    .el-carousel__item:nth-child(2n+1) {
+        background-color: #d3dce6;
+    }
 </style>
