@@ -1,0 +1,42 @@
+<!--<ion-content padding class="transparent-header"
+             [ngStyle]="{'background-image': 'url(' + backgroundImage +')'}">-->
+  <!--<ion-header>-->
+  <!--<ion-navbar>-->
+  <!--</ion-navbar>-->
+  <!--</ion-header>-->
+<ion-content>
+  <div padding>
+    <ion-row>
+      <ion-col>
+        <img class="logo" style="height:290px ;width:380px " src="assets/img/card/pig.jpg"/>
+      </ion-col>
+    </ion-row>
+    <form (ngSubmit)="login()">
+      <div padding-left padding-right>
+        <ion-list padding-right no-margin >
+
+
+            <ion-item>
+              <ion-label>学号：</ion-label>
+              <ion-input type="text" placeholder="可使用账号：300003" [(ngModel)]="user.name" name="name"></ion-input>
+            </ion-item>
+            <ion-item margin-top>
+              <ion-label>密码：</ion-label>
+              <ion-input type="password" placeholder="300003"  [(ngModel)]="user.pwd" name="pwd"></ion-input>
+            </ion-item>
+            <ion-item no-lines></ion-item>
+          </ion-list>
+
+          <button ion-button type="submit" class="login-button" color="secondary">登录</button>
+        <ion-item no-lines><p style="color: #9d9d9d">此系统账号和密码皆由教务系统提供</p></ion-item>
+      </div>
+    </form>
+ <!--   <ion-row>
+      <ion-col>
+        <div (click)="goToSignup()">
+       &lt;!&ndash;   <p>或者新建账户</p>&ndash;&gt;
+        </div>
+      </ion-col>
+    </ion-row>-->
+  </div>
+</ion-content>
