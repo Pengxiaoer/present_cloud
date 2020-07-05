@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ssq.dao.CodeMapper" >
+    <insert id="verification">
+        insert into code(CodeId,Code,Tel,time) values(#{param1},#{param2},#{param3},#{param4})
+    </insert>
+    <select id="findmaxid" resultType="int">
+        select ifnull(max(CodeId),0)AS CodeId from code
+    </select>
+    <select id="find" resultType="com.ssq.entity.Code">
+        select * from code where tel=#{param1}
+    </select>
+</mapper>

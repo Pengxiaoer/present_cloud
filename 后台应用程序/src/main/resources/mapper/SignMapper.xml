@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ssq.dao.SignMapper" >
+    <select id="findMaxSignId" resultType="int">
+        select ifnull(max(SignId),0)AS SignId from sign
+    </select>
+
+    <select id="findMaxSignId2" resultType="int">
+        select ifnull(max(SignId),0)AS SignId from sign where CourseId=#{param1}
+    </select>
+
+    <select id="findSignBySignId" resultType="com.ssq.entity.Sign">
+        select * from sign where SignId=#{param1}
+    </select>
+
+    <insert id="signIn">
+        insert into sign(SignId,CourseId,TeacherId,Duration,SignInTime) values(#{param1},#{param2},#{param3},#{param4},#{param5})
+    </insert>
+
+    <select id="getSignByCourseId" resultType="com.ssq.entity.Sign">
+        select * from sign where CourseId=#{param1}
+    </select>
+</mapper>

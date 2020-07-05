@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ssq.dao.SignRecordMapper" >
+    <insert id="signBySignId">
+        insert into signrecord(SignRecordId,SignId,SignTime,StudentId) values(#{param1},#{param2},#{param3},#{param4})
+    </insert>
+
+    <select id="findSignRecordId" resultType="int">
+        select ifnull(max(SignRecordId),0)AS SignRecordId from signrecord
+    </select>
+
+    <select id="getSignRecord" resultType="com.ssq.entity.SignRecord">
+        select * from signrecord where SignId=#{param1} and StudentId=#{param2}
+    </select>
+
+    <select id="getSignRecordBySignId" resultType="com.ssq.entity.SignRecord">
+        select * from signrecord where SignId=#{param1}
+    </select>
+</mapper>

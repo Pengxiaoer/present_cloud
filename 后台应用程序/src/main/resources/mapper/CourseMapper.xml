@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ssq.dao.CourseMapper" >
+    <select id="findCTByClassId" resultType="com.ssq.entity.CourseTable">
+        select * from coursetable where ClassId=#{param1}
+    </select>
+
+    <select id="findCByCourseId" resultType="com.ssq.entity.Course">
+        select * from course where CourseId=#{param1}
+    </select>
+
+    <select id="findCByTeacherId" resultType="com.ssq.entity.Course">
+        select * from course where TeacherId=#{param1}
+    </select>
+</mapper>
